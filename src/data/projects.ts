@@ -12,7 +12,7 @@ export const PROJECTS: ProjectItem[] = [
     lootReward: "+600 EXP, REST API Master Scroll",
     techStack: ["NestJS", "TypeScript", "Node.js", "PostgreSQL", "Supabase", "JWT", "Postman"],
     demoUrl: "",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/farhansyaah28/sehati-backend.git",
     featured: true
   },
   {
@@ -24,7 +24,7 @@ export const PROJECTS: ProjectItem[] = [
     lootReward: "+420 EXP, Civic Tech Badge",
     techStack: ["Node.js", "Express.js", "JavaScript", "Tailwind CSS", "PostgreSQL", "Supabase"],
     demoUrl: "https://sisuratgampong.vercel.app/",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/farhansyaah28/SiSurat-GampongIlie.git",
     imageSrc: "/assets/projects/sisurat.png",
     featured: true
   },
@@ -37,7 +37,7 @@ export const PROJECTS: ProjectItem[] = [
     lootReward: "+380 EXP, Education Tech Seal",
     techStack: ["PHP Native", "MySQL", "JavaScript", "HTML", "CSS"],
     demoUrl: "",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/farhansyaah28/PBM-Politeknik-Aceh.git",
     imageSrc: "/assets/projects/cbt-politeknik.jpg",
     featured: false
   },
@@ -50,7 +50,7 @@ export const PROJECTS: ProjectItem[] = [
     lootReward: "+280 EXP, Campus Admin Badge",
     techStack: ["PHP Native", "MySQL", "JavaScript", "Tailwind CSS"],
     demoUrl: "",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/farhansyaah28/SIPAK-Politeknik-Aceh.git",
     featured: false
   },
   {
@@ -62,7 +62,7 @@ export const PROJECTS: ProjectItem[] = [
     lootReward: "+350 EXP, GovTech Artifact",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "PostgreSQL", "Supabase"],
     demoUrl: "https://simang-bappeda.vercel.app/",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/farhansyaah28/SIMANG-BAPPEDA.git",
     imageSrc: "/assets/projects/simagang.jpg",
     featured: true
   }

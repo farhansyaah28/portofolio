@@ -19,22 +19,22 @@ export function GuildHall({ activeSkin }: GuildHallProps) {
   };
 
   return (
-    <section id="guild" className="pt-10 pb-14 px-4 max-w-5xl mx-auto scroll-mt-16">
+    <section id="guild" className="pt-6 pb-10 px-4 max-w-5xl mx-auto scroll-mt-16">
       {/* Header */}
-      <div className="text-center mb-8">
-        <div className="inline-block bg-[#2F6FED] text-white px-4 py-1 font-rpg-header text-xs border-2 border-[#1B3A8A] shadow-[3px_3px_0px_#1B3A8A] mb-3">
+      <div className="text-center mb-5">
+        <div className="inline-block bg-[#2F6FED] text-white px-3 py-0.5 font-rpg-header text-[9px] border-2 border-[#1B3A8A] shadow-[2px_2px_0px_#1B3A8A] mb-1.5">
           AREA 3: GUILD HALL (ORGANISASI)
         </div>
-        <h2 className="font-rpg-header text-2xl md:text-3xl text-[#1B3A8A] mb-2">
+        <h2 className="font-rpg-header text-base sm:text-lg md:text-xl text-[#1B3A8A] text-3d-title mb-1">
           GUILD HALL & EXPEDITION LOG
         </h2>
-        <p className="font-rpg-body text-xl md:text-2xl text-[#1B3A8A] max-w-2xl mx-auto">
+        <p className="font-rpg-body text-sm sm:text-base text-[#1B3A8A]/90 max-w-xl mx-auto">
           Benteng guild organisasi kemahasiswaan dan pos ekspedisi lapangan dalam membangun sinergi tim.
         </p>
       </div>
 
       {/* RPG Castle Waypoint Nodes */}
-      <div className="relative border-l-4 border-dashed border-[#2F6FED] ml-4 md:ml-12 pl-6 md:pl-10 space-y-6 md:space-y-7">
+      <div className="relative border-l-4 border-dashed border-[#2F6FED] ml-4 md:ml-10 pl-5 md:pl-8 space-y-4">
         {EXPERIENCES.map((exp, index) => {
           const isHighlighted = activeSkin.highlightExperiences.includes(exp.id);
           const isExpanded = !!expandedLogs[exp.id];
@@ -44,68 +44,66 @@ export function GuildHall({ activeSkin }: GuildHallProps) {
             <div key={exp.id} className="relative group">
               {/* Castle Waypoint Pin */}
               <div
-                className={`absolute -left-[39px] md:-left-[59px] top-2 w-9 h-9 border-3 border-[#1B3A8A] shadow-[3px_3px_0px_#1B3A8A] flex items-center justify-center transition-colors ${
-                  isHighlighted ? "bg-[#F7C531] text-[#1B3A8A]" : "bg-white text-[#2F6FED]"
-                }`}
+                className={`absolute -left-[35px] md:-left-[49px] top-2 w-8 h-8 border-2 border-[#1B3A8A] shadow-[2px_2px_0px_#1B3A8A] flex items-center justify-center transition-colors ${isHighlighted ? "bg-[#F7C531] text-[#1B3A8A]" : "bg-white text-[#2F6FED]"
+                  }`}
               >
-                <Castle className="w-5 h-5" />
+                <Castle className="w-4 h-4" />
               </div>
 
               {/* Exp Card Window */}
               <div
-                className={`p-4 sm:p-5 bg-white border-4 border-[#1B3A8A] transition-all ${
-                  isHighlighted
-                    ? "shadow-[inset_3px_3px_0px_#FFF275,inset_-3px_-3px_0px_#F7C531,5px_5px_0px_#1B3A8A]"
-                    : "shadow-[inset_3px_3px_0px_#8FD3FF,inset_-3px_-3px_0px_#2F6FED,5px_5px_0px_#1B3A8A]"
-                }`}
+                className={`p-3.5 sm:p-4 bg-white border-3 border-[#1B3A8A] transition-all ${isHighlighted
+                  ? "shadow-[inset_2px_2px_0px_#FFF275,inset_-2px_-2px_0px_#F7C531,4px_4px_0px_#1B3A8A]"
+                  : "shadow-[inset_2px_2px_0px_#8FD3FF,inset_-2px_-2px_0px_#2F6FED,4px_4px_0px_#1B3A8A]"
+                  }`}
               >
                 {/* Header Outpost: Terstruktur & Rapi */}
-                <div className="pb-3 mb-3 border-b-2 border-dashed border-[#1B3A8A]/30">
+                <div className="pb-2 mb-2 border-b-2 border-dashed border-[#1B3A8A]/30">
                   {/* Top Bar: Outpost Tag & Lokasi di Kiri, Tanggal & Checkpoint di Kanan */}
-                  <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                  <div className="flex flex-wrap items-center justify-between gap-2 mb-1.5">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span className="font-rpg-header text-[9px] bg-[#1B3A8A] text-[#F7C531] px-2 py-0.5 border border-[#1B3A8A] tracking-wider shadow-[1px_1px_0px_#2F6FED]">
+                      <span className="font-rpg-header text-[8px] bg-[#1B3A8A] text-[#F7C531] px-2 py-0.5 border border-[#1B3A8A] tracking-wider shadow-[1px_1px_0px_#2F6FED]">
                         OUTPOST {index + 1 < 10 ? `0${index + 1}` : index + 1}
                       </span>
-                      <div className="flex items-center gap-1 font-rpg-sub text-xs text-[#2F6FED] font-bold">
-                        <MapPin className="w-3.5 h-3.5 shrink-0" />
+                      <div className="flex items-center gap-1 font-rpg-sub text-[11px] text-[#2F6FED] font-bold">
+                        <MapPin className="w-3 h-3 shrink-0" />
                         <span>{exp.townName}</span>
                       </div>
                     </div>
 
                     <div className="flex items-center gap-2 flex-wrap ml-auto sm:ml-0">
                       {isHighlighted && (
-                        <span className="font-rpg-header text-[8px] bg-[#F7C531] text-[#1B3A8A] px-2 py-0.5 border border-[#1B3A8A] shadow-[1px_1px_0px_#1B3A8A] font-bold">
+                        <span className="font-rpg-header text-[7.5px] bg-[#F7C531] text-[#1B3A8A] px-2 py-0.5 border border-[#1B3A8A] shadow-[1px_1px_0px_#1B3A8A] font-bold">
                           ★ KEY CHECKPOINT
                         </span>
                       )}
-                      <div className="font-rpg-sub text-xs bg-[#DCEEFF] text-[#1B3A8A] px-2.5 py-0.5 border-2 border-[#1B3A8A] shadow-[2px_2px_0px_#1B3A8A] font-bold whitespace-nowrap">
+                      <div className="font-rpg-sub text-[11px] bg-[#DCEEFF] text-[#1B3A8A] px-2 py-0.5 border-2 border-[#1B3A8A] shadow-[2px_2px_0px_#1B3A8A] font-bold whitespace-nowrap">
                         {exp.period}
                       </div>
                     </div>
                   </div>
 
                   {/* Title & Organization Subtitle */}
-                  <h3 className="font-rpg-header text-sm sm:text-base text-[#1B3A8A] leading-snug">
+                  <h3 className="font-rpg-header text-xs sm:text-sm text-[#1B3A8A] leading-snug">
                     {exp.role}
                   </h3>
-                  <p className="font-rpg-body text-base text-[#1B3A8A]/75 mt-0.5">
+                  <p className="font-rpg-body text-sm sm:text-base text-[#1B3A8A]/75 mt-0.5">
                     {exp.organization}
                   </p>
                 </div>
 
                 {/* Primary Log / Highlight */}
-                <div className="mb-3">
-                  <div className="flex items-start gap-2 font-rpg-body text-base sm:text-lg text-[#1B3A8A]">
+                <div className="mb-2.5">
+                  <div className="flex items-start gap-2 font-rpg-body text-sm sm:text-base text-[#1B3A8A]">
                     <span className="text-[#2F6FED] font-bold shrink-0 mt-0.5">►</span>
                     <span className="leading-snug">{exp.questLog[0]}</span>
                   </div>
 
                   {/* Additional Logs (Collapsible to prevent text fatigue) */}
                   {hasMultipleLogs && isExpanded && (
-                    <div className="mt-2.5 pt-2 border-t border-dashed border-[#1B3A8A]/20 space-y-2 animate-fadeIn pl-2">
+                    <div className="mt-2 pt-2 border-t border-dashed border-[#1B3A8A]/20 space-y-1.5 animate-fadeIn pl-2">
                       {exp.questLog.slice(1).map((log, i) => (
-                        <div key={i} className="flex items-start gap-2 font-rpg-body text-base text-[#1B3A8A]">
+                        <div key={i} className="flex items-start gap-2 font-rpg-body text-sm sm:text-base text-[#1B3A8A]">
                           <span className="text-[#2F6FED] font-bold shrink-0 mt-0.5">►</span>
                           <span className="leading-snug">{log}</span>
                         </div>

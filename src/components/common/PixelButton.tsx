@@ -20,12 +20,12 @@ export function PixelButton({
   const getVariantClass = () => {
     switch (variant) {
       case "gold":
-        return "pixel-btn-gold";
+        return "snes-btn-gold";
       case "white":
-        return "bg-white text-[#1B3A8A] hover:bg-[#DCEEFF] border-3 border-[#1B3A8A] shadow-[4px_4px_0px_#1B3A8A] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[2px_2px_0px_#1B3A8A]";
+        return "snes-btn-white";
       case "primary":
       default:
-        return "pixel-btn";
+        return "snes-btn";
     }
   };
 

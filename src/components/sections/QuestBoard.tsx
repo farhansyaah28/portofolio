@@ -36,16 +36,16 @@ export function QuestBoard({ activeSkin, onSelectRole }: QuestBoardProps) {
   const hasNoProjects = availableProjects.length === 0;
 
   return (
-    <section id="quests" className="pt-10 pb-14 px-4 max-w-6xl mx-auto scroll-mt-16">
+    <section id="quests" className="pt-6 pb-10 px-4 max-w-5xl mx-auto scroll-mt-16">
       {/* Header */}
-      <div className="text-center mb-8">
-        <div className="inline-block bg-[#2F6FED] text-white px-4 py-1 font-rpg-header text-xs border-2 border-[#1B3A8A] shadow-[3px_3px_0px_#1B3A8A] mb-3">
+      <div className="text-center mb-5">
+        <div className="inline-block bg-[#2F6FED] text-white px-3 py-0.5 font-rpg-header text-[9px] border-2 border-[#1B3A8A] shadow-[2px_2px_0px_#1B3A8A] mb-1.5">
           AREA 2: QUEST BOARD (PROJECTS)
         </div>
-        <h2 className="font-rpg-header text-2xl md:text-3xl text-[#1B3A8A] mb-2">
+        <h2 className="font-rpg-header text-base sm:text-lg md:text-xl text-[#1B3A8A] text-3d-title mb-1">
           COMPLETED QUEST BOUNTIES
         </h2>
-        <p className="font-rpg-body text-xl md:text-2xl text-[#1B3A8A] max-w-xl mx-auto">
+        <p className="font-rpg-body text-sm sm:text-base text-[#1B3A8A]/90 max-w-xl mx-auto">
           Misi software & proyek aplikasi yang diselesaikan oleh role{" "}
           <span className="font-bold text-[#2F6FED]">{activeSkin.name}</span>.
         </p>
@@ -53,21 +53,21 @@ export function QuestBoard({ activeSkin, onSelectRole }: QuestBoardProps) {
 
       {/* State jika karakter tidak memiliki project software (Leader Guild & Tour Guide) */}
       {hasNoProjects ? (
-        <div className="snes-window-gold p-8 md:p-12 bg-white text-center max-w-3xl mx-auto">
-          <div className="inline-block bg-[#DCEEFF] text-[#1B3A8A] px-3.5 py-1 font-rpg-header text-[10px] border-2 border-[#1B3A8A] shadow-[2px_2px_0px_#1B3A8A] mb-4">
+        <div className="snes-window-gold p-6 md:p-8 bg-white text-center max-w-2xl mx-auto">
+          <div className="inline-block bg-[#DCEEFF] text-[#1B3A8A] px-3 py-0.5 font-rpg-header text-[8.5px] border-2 border-[#1B3A8A] shadow-[2px_2px_0px_#1B3A8A] mb-3">
             ✦ NON-SOFTWARE QUEST CLASS ✦
           </div>
-          <h3 className="font-rpg-header text-lg sm:text-xl text-[#1B3A8A] mb-3 leading-snug">
+          <h3 className="font-rpg-header text-sm sm:text-base text-[#1B3A8A] mb-2 leading-snug">
             TIDAK ADA QUEST PROYEK SOFTWARE PADA ROLE INI
           </h3>
-          <p className="font-rpg-body text-xl md:text-2xl text-[#1B3A8A]/85 max-w-xl mx-auto mb-6 leading-relaxed">
+          <p className="font-rpg-body text-base sm:text-lg text-[#1B3A8A]/85 max-w-lg mx-auto mb-4 leading-snug">
             Role <span className="font-bold text-[#2F6FED]">{activeSkin.name}</span> difokuskan pada misi kepemimpinan organisasi, koordinasi sosial masyarakat, dan ekspedisi navigasi lapangan—bukan rekayasa perangkat lunak.
           </p>
-          <div className="snes-window-panel p-4 bg-[#F4F9FF] max-w-md mx-auto text-left mb-6 border-2 border-[#1B3A8A]">
-            <span className="font-rpg-header text-[9px] text-[#2F6FED] block mb-1">
+          <div className="snes-window-panel p-3 bg-[#F4F9FF] max-w-md mx-auto text-left border-2 border-[#1B3A8A]">
+            <span className="font-rpg-header text-[8px] text-[#2F6FED] block mb-1">
               SARAN PETUALANG:
             </span>
-            <p className="font-rpg-body text-lg text-[#1B3A8A]">
+            <p className="font-rpg-body text-sm sm:text-base text-[#1B3A8A]">
               Jelajahi rekam jejak organisasi role ini di <strong>Area 3: Guild Hall</strong>, atau beralih ke role <strong>Software Engineer</strong> untuk melihat 5 proyek sistem informasi & REST API.
             </p>
           </div>
@@ -75,7 +75,7 @@ export function QuestBoard({ activeSkin, onSelectRole }: QuestBoardProps) {
       ) : (
         <>
           {/* Filter Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 mb-8 font-rpg-header text-xs">
+          <div className="flex flex-wrap justify-center gap-2 mb-5 font-rpg-header text-[9.5px]">
             {["ALL", "S-RANK", "A-RANK", "B-RANK"].map((tab) => {
               const count = tab === "ALL"
                 ? availableProjects.length
@@ -86,9 +86,9 @@ export function QuestBoard({ activeSkin, onSelectRole }: QuestBoardProps) {
                 <button
                   key={tab}
                   onClick={() => setFilter(tab)}
-                  className={`px-3.5 py-2 cursor-pointer border-3 border-[#1B3A8A] transition-all font-bold whitespace-nowrap ${filter === tab
-                    ? "bg-[#2F6FED] text-white shadow-[3px_3px_0px_#1B3A8A] translate-x-[1px] translate-y-[1px]"
-                    : "bg-white text-[#1B3A8A] hover:bg-[#DCEEFF] shadow-[4px_4px_0px_#1B3A8A]"
+                  className={`px-3 py-1.5 cursor-pointer border-2 border-[#1B3A8A] transition-all font-bold whitespace-nowrap ${filter === tab
+                    ? "bg-[#2F6FED] text-white shadow-[2px_2px_0px_#1B3A8A] translate-x-[1px] translate-y-[1px]"
+                    : "bg-white text-[#1B3A8A] hover:bg-[#DCEEFF] shadow-[3px_3px_0px_#1B3A8A]"
                     }`}
                 >
                   {tab} ({count})
@@ -98,24 +98,23 @@ export function QuestBoard({ activeSkin, onSelectRole }: QuestBoardProps) {
           </div>
 
           {/* Parchment Quests Grid with Retro Visual Mockup Frame */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {filteredProjects.map((quest) => {
               const isNoteOpen = !!expandedNotes[quest.id];
               return (
                 <div
                   key={quest.id}
-                  className="p-4 sm:p-5 flex flex-col justify-between border-4 border-[#1B3A8A] relative bg-white shadow-[inset_3px_3px_0px_#FFF275,inset_-3px_-3px_0px_#F7C531,6px_6px_0px_#1B3A8A] transition-transform hover:-translate-y-0.5"
+                  className="p-3.5 sm:p-4 flex flex-col justify-between border-3 border-[#1B3A8A] relative bg-white shadow-[inset_2px_2px_0px_#FFF275,inset_-2px_-2px_0px_#F7C531,4px_4px_0px_#1B3A8A] transition-transform hover:-translate-y-0.5"
                 >
                   <div>
                     {/* Top Status & Rank Strip */}
                     <div className="flex items-center justify-between gap-2 mb-3">
                       <div className="flex items-center gap-2">
                         <span
-                          className={`font-rpg-header text-[8px] sm:text-[9px] px-2.5 py-1 border-2 border-[#1B3A8A] shadow-[1px_1px_0px_#1B3A8A] font-bold whitespace-nowrap shrink-0 leading-none ${
-                            quest.questRank === "S-RANK"
-                              ? "bg-[#F7C531] text-[#1B3A8A]"
-                              : "bg-[#8FD3FF] text-[#1B3A8A]"
-                          }`}
+                          className={`font-rpg-header text-[8px] sm:text-[9px] px-2.5 py-1 border-2 border-[#1B3A8A] shadow-[1px_1px_0px_#1B3A8A] font-bold whitespace-nowrap shrink-0 leading-none ${quest.questRank === "S-RANK"
+                            ? "bg-[#F7C531] text-[#1B3A8A]"
+                            : "bg-[#8FD3FF] text-[#1B3A8A]"
+                            }`}
                         >
                           {quest.questRank}
                         </span>
@@ -142,8 +141,8 @@ export function QuestBoard({ activeSkin, onSelectRole }: QuestBoardProps) {
                             {quest.demoUrl
                               ? quest.demoUrl.replace("https://", "")
                               : quest.id === "quest-3"
-                              ? "cbt.politeknik.local"
-                              : `${quest.id}.app`}
+                                ? "cbt.politeknik.local"
+                                : `${quest.id}.app`}
                           </span>
                         </div>
 

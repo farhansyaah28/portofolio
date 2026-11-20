@@ -23,7 +23,7 @@ export const CHARACTER_SKINS: CharacterSkin[] = [
   {
     id: "programmer",
     name: "Software Engineer",
-    roleTitle: "Back-End Developer & Web Architect",
+    roleTitle: "Back-End & Web Developer",
     imageSrc: "/assets/hero-programmer.png",
     perk: "NestJS & TypeScript | REST API Mastery",
     description: "Spesialis pengembangan back-end dan REST API dengan NestJS, Express.js, Next.js, TypeScript, dan PostgreSQL. Berpengalaman membangun sistem skala produksi dengan autentikasi JWT dan pengujian performa.",
@@ -302,10 +302,10 @@ export const CHARACTER_PROFILE = {
     },
   ],
   socialLinks: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
+    github: "https://github.com/farhansyaah28",
+    linkedin: "https://www.linkedin.com/in/farhansyaah/",
     email: "mailto:teukufarhan028@gmail.com",
-    whatsapp: "https://wa.me/6281393803484",
+    whatsapp: "https://wa.me/62895613105670",
     cvLink: "#"
   }
 };

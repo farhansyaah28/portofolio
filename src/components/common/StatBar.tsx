@@ -33,22 +33,24 @@ export function StatBar({
 
   return (
     <div className="w-full">
-      <div className="flex justify-between items-center mb-1 text-xs font-rpg-sub text-[#1B3A8A]">
-        <span className="font-bold tracking-wider">{label}</span>
+      <div className="flex justify-between items-center mb-0.5 text-[10px] sm:text-[11px] font-rpg-sub text-[#1B3A8A]">
+        <span className="font-bold tracking-wide drop-shadow-[1px_1px_0px_#FFFFFF]">
+          {label}
+        </span>
         {showValues && (
-          <span className="font-mono text-[11px] font-bold">
+          <span className="font-mono text-[10px] font-bold bg-[#DCEEFF] px-1.5 py-0.2 border border-[#1B3A8A] shadow-[1px_1px_0px_#1B3A8A]">
             {current} / {max}
           </span>
         )}
       </div>
-      <div className="w-full h-4 bg-white border-2 border-[#1B3A8A] pixel-box-inset p-[1px] relative overflow-hidden">
+      <div className="w-full h-3.5 bg-[#E8F4FF] border-2 border-[#1B3A8A] shadow-[inset_2px_2px_0px_rgba(27,58,138,0.22),2px_2px_0px_#1B3A8A] p-[1px] relative overflow-hidden">
         <div
-          className={`h-full ${getColorClass()} transition-all duration-500 ease-out`}
+          className={`h-full ${getColorClass()} border-r-2 border-[#1B3A8A] shadow-[inset_0_2px_0_rgba(255,255,255,0.45),inset_0_-2px_0_rgba(0,0,0,0.2)] transition-all duration-500 ease-out`}
           style={{ width: `${percentage}%` }}
         />
         {/* Pixel grid segments overlay */}
         <div
-          className="absolute inset-0 pointer-events-none opacity-20"
+          className="absolute inset-0 pointer-events-none opacity-25"
           style={{
             backgroundImage:
               "linear-gradient(90deg, #1B3A8A 1px, transparent 1px)",

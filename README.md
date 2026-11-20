@@ -1,6 +1,6 @@
 # 🎮 T. Farhan Syah — 16-Bit RPG Portfolio
 
-> A personal portfolio built as an interactive 16-bit RPG adventure. Explore different "areas" to discover skills, projects, experience, and achievements — all wrapped in a retro pixel-art game shell.
+> Personal portfolio built as an interactive 16-bit SNES RPG adventure. Explore different areas to discover skills, projects, organizational experience, and achievements — all wrapped in a retro pixel-art aesthetic.
 
 ---
 
@@ -8,13 +8,13 @@
 
 | Area | Description |
 |------|-------------|
-| 🏰 **Start Screen** | Animated title screen with character selection |
-| 🌿 **Village (About)** | Introduction & bio with NPC-style dialog boxes |
-| 📋 **Quest Board** | Projects showcase with status badges |
-| 🏛️ **Guild Hall** | Work experience & tech stack |
-| 🏆 **Achievement Hall** | Certifications & academic achievements |
-| 🎯 **Final Area** | Contact & social links |
-| 🦕 **Dino Runner Mini-Game** | Custom dino runner with animated pixel-art character sprite |
+| 🏰 **Start Screen** | 16-bit hero dossier & character role selector (4 roles) |
+| 🌿 **Area 1: Village Informatika** | Academic profile, role competencies & interactive tech inventory |
+| 📋 **Area 2: Quest Board** | Completed software project bounties with live demo & GitHub links |
+| 🏛️ **Area 3: Guild Hall** | Campus organization & field expedition timeline logs |
+| 🏆 **Area 4: Hall of Honors** | Competition medals, trophies & national/international event committees |
+| 🦕 **Area 5: Dino Runner Mini-Game** | Custom HTML5 Canvas pixel runner with animated character spritesheet |
+| ✉️ **Area 6: Final Area** | Direct contact channels & CV download |
 
 ---
 
@@ -23,23 +23,16 @@
 - **Framework:** Next.js 16 (App Router, Turbopack)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS v4
-- **Canvas:** HTML5 Canvas API (custom game engine)
+- **Mini-Game Engine:** HTML5 Canvas API + Web Audio API retro SFX synthesizer
 - **Icons:** Lucide React
-- **Font:** Press Start 2P (Google Fonts — pixel aesthetic)
-- **Deployment:** Vercel
+- **Fonts:** Press Start 2P, Silkscreen, VT323 (Google Fonts)
 
 ---
 
 ## 🚀 Getting Started
 
-### Prerequisites
-- Node.js 18+
-- npm
-
-### Installation
-
 ```bash
-# Clone the repo
+# Clone repository
 git clone https://github.com/farhansyaah28/portofolio.git
 cd portofolio
 
@@ -52,64 +45,15 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Build for Production
-
-```bash
-npm run build
-npm start
-```
-
 ---
 
-## 📁 Project Structure
-
-```
-src/
-├── app/
-│   ├── page.tsx              # Main entry point
-│   └── layout.tsx            # Root layout
-├── components/
-│   ├── common/               # Reusable UI components (PixelButton, StatBar, DialogBox, etc.)
-│   ├── sections/             # RPG area sections (StartScreen, VillageAbout, QuestBoard, etc.)
-│   └── minigame/             # Dino runner mini-game (RpgCanvas, VirtualDpad, gameData)
-├── data/                     # Portfolio data (profile, projects, experience, achievements)
-├── hooks/                    # Custom hooks (useAudio)
-└── types/                    # TypeScript types
-public/
-└── assets/                   # Images, sprites, and spritesheets
-```
-
----
-
-## 🎮 Mini-Game
-
-The embedded **Dino Runner** mini-game features:
-- Custom **pixel-art character sprite** (animated spritesheet)
-- Procedurally generated obstacles
-- Score tracking with high score
-- Mobile-friendly virtual D-pad controls
-- Keyboard support (Space / Arrow Up to jump)
-
----
-
-## 👤 About Me
+## 👤 Author & Contact
 
 **T. Farhan Syah, S.Kom**  
-Fresh Graduate — Universitas Syiah Kuala  
-Software Engineer | Full-Stack Developer
+S1 Informatika — Universitas Syiah Kuala (USK)  
+Back-End & Web Developer
 
-- 📧 Email: farhansyah471@gmail.com  
-- 📱 WhatsApp: +62 812-6938-9500  
-- 🐙 GitHub: [@farhansyaah28](https://github.com/farhansyaah28)
-
----
-
-## 📄 License
-
-This project is for personal portfolio use. Feel free to fork and adapt for your own portfolio with attribution.
-
----
-
-<div align="center">
-  Made with ❤️ and lots of pixel art
-</div>
+- 📧 **Email:** [teukufarhan028@gmail.com](mailto:teukufarhan028@gmail.com)
+- 📱 **WhatsApp:** [+62 895-6131-05670](https://wa.me/62895613105670)
+- 💼 **LinkedIn:** [linkedin.com/in/farhansyaah](https://www.linkedin.com/in/farhansyaah/)
+- 🐙 **GitHub:** [@farhansyaah28](https://github.com/farhansyaah28)
