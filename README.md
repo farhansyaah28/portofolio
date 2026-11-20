@@ -1,5 +1,7 @@
 # 🎮 T. Farhan Syah — 16-Bit RPG Portfolio
 
+🌐 **Live Website:** **[https://farhansyaah.me](https://farhansyaah.me)**
+
 > Personal portfolio built as an interactive 16-bit SNES RPG adventure. Explore different areas to discover skills, projects, organizational experience, and achievements — all wrapped in a retro pixel-art aesthetic.
 
 ---
@@ -43,7 +45,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser, or visit the live site at **[https://farhansyaah.me](https://farhansyaah.me)**.
 
 ---
 
@@ -53,6 +55,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 S1 Informatika — Universitas Syiah Kuala (USK)  
 Back-End & Web Developer
 
+- 🌐 **Portfolio:** [https://farhansyaah.me](https://farhansyaah.me)
 - 📧 **Email:** [teukufarhan028@gmail.com](mailto:teukufarhan028@gmail.com)
 - 📱 **WhatsApp:** [+62 895-6131-05670](https://wa.me/62895613105670)
 - 💼 **LinkedIn:** [linkedin.com/in/farhansyaah](https://www.linkedin.com/in/farhansyaah/)
