@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-header: 'Press Start 2P', monospace;
+    --font-sub: 'Silkscreen', monospace;
+    --font-body: 'VT323', monospace;
+  }
+}
+
+.font-rpg-header {
+  font-family: 'Press Start 2P', monospace;
+}
+
+.font-rpg-sub {
+  font-family: 'Silkscreen', monospace;
+}
+
+.font-rpg-body {
+  font-family: 'VT323', monospace;
+}
+
+/* 16-BIT SNES WINDOW FRAME WITH DUAL-TONE INNER BEVEL */
+.snes-window {
+  background-color: #FFFFFF;
+  border: 4px solid #1B3A8A;
+  box-shadow: 
+    inset 3px 3px 0px #8FD3FF,
+    inset -3px -3px 0px #2F6FED,
+    5px 5px 0px #1B3A8A;
+  position: relative;
+}
+
+.snes-window-gold {
+  background-color: #FFFFFF;
+  border: 4px solid #1B3A8A;
+  box-shadow: 
+    inset 3px 3px 0px #FFF275,
+    inset -3px -3px 0px #F7C531,
+    5px 5px 0px #1B3A8A;
+  position: relative;
+}
+
+.snes-window-panel {
+  background-color: #F4F9FF;
+  border: 2px solid #1B3A8A;
+  box-shadow: inset 2px 2px 0px #FFFFFF, inset -2px -2px 0px #DCEEFF;
+}
+
+/* RETRO BUTTON WITH PHYSICAL PRESS EFFECT */
+.snes-btn {
+  background-color: #2F6FED;
+  color: #FFFFFF;
+  border: 3px solid #1B3A8A;
+  box-shadow: 
+    inset 2px 2px 0px #8FD3FF,
+    inset -2px -2px 0px #1B3A8A,
+    4px 4px 0px #1B3A8A;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.05s ease;
+}
+
+.snes-btn:hover {
+  background-color: #4080FF;
+  box-shadow: 
+    inset 2px 2px 0px #B5E2FF,
+    inset -2px -2px 0px #1B3A8A,
+    4px 4px 0px #1B3A8A;
+}
+
+.snes-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 
+    inset 2px 2px 0px #1B3A8A,
+    inset -2px -2px 0px #8FD3FF,
+    1px 1px 0px #1B3A8A;
+}
+
+.snes-btn-gold {
+  background-color: #F7C531;
+  color: #1B3A8A;
+  border: 3px solid #1B3A8A;
+  box-shadow: 
+    inset 2px 2px 0px #FFF9A6,
+    inset -2px -2px 0px #D49B00,
+    4px 4px 0px #1B3A8A;
+  cursor: pointer;
+  user-select: none;
+}
+
+.snes-btn-gold:hover {
+  background-color: #FFD24C;
+}
+
+.snes-btn-gold:active {
+  transform: translate(3px, 3px);
+  box-shadow: 
+    inset 2px 2px 0px #D49B00,
+    inset -2px -2px 0px #FFF9A6,
+    1px 1px 0px #1B3A8A;
+}
+
+.snes-btn-white {
+  background-color: #FFFFFF;
+  color: #1B3A8A;
+  border: 3px solid #1B3A8A;
+  box-shadow: 
+    inset 2px 2px 0px #FFFFFF,
+    inset -2px -2px 0px #DCEEFF,
+    4px 4px 0px #1B3A8A;
+  cursor: pointer;
+}
+
+.snes-btn-white:hover {
+  background-color: #DCEEFF;
+}
+
+.snes-btn-white:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0px #1B3A8A;
+}
+
+/* PIXEL RENDERING */
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* RETRO SCANLINE & GRID BACKGROUND */
+.bg-rpg-world {
+  background-color: #DCEEFF;
+  background-image: 
+    linear-gradient(to right, rgba(27, 58, 138, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(27, 58, 138, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* PIXEL CLOUD ANIMATION */
+@keyframes cloud-move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-clouds {
+  animation: cloud-move 45s linear infinite;
+}
+
+/* JRPG CURSOR WOBBLE ANIMATION */
+@keyframes cursor-point {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+}
+
+.animate-cursor-point {
+  animation: cursor-point 0.6s infinite ease-in-out;
+}
+
+/* SPRITE IDLE BOBBING ANIMATION */
+@keyframes sprite-idle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.animate-sprite-idle {
+  animation: sprite-idle 1.2s infinite ease-in-out;
+}
