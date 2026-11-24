@@ -90,7 +90,9 @@ export function FinalArea() {
 
           <a
             href={CHARACTER_PROFILE.socialLinks.cvLink}
-            download
+            download="CV-T-Farhan-Syah.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => soundEngine.playCoin()}
           >
             <PixelButton variant="gold" size="sm" className="whitespace-nowrap">

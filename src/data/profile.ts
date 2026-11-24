@@ -306,6 +306,6 @@ export const CHARACTER_PROFILE = {
     linkedin: "https://www.linkedin.com/in/farhansyaah/",
     email: "mailto:teukufarhan028@gmail.com",
     whatsapp: "https://wa.me/62895613105670",
-    cvLink: "#"
+    cvLink: "/CV-T-Farhan-Syah.pdf"
   }
 };
